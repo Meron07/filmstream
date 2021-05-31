@@ -1,309 +1,309 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <meta charset="utf-8">
-        <title>Film utlån BETAL</title>
-        <link href="styles/index.css" rel="stylesheet">
-        <link href="styles/packs.css" rel="stylesheet">
-        <link href="styles/pay.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a href="./">
-                <div class="brand">
-                    <img src="images/film.png" alt="" width="50">
-                    <span>Film Dealeren<span>
+<head>
+    <meta charset="utf-8">
+    <title>Film utlån BETAL</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <link href="styles/packs.css" rel="stylesheet">
+    <link href="styles/pay.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <a href="./">
+        <div class="brand">
+            <img src="images/film.png" alt="" width="50">
+            <span>Film Dealeren<span>
+        </div>
+    </a>
+    <nav>
+        <a href="./pay.html?pack=action">Action</a>
+        <a href="./pay.html?pack=masterpieces">Mesterverk</a>
+        <a href="./pay.html?pack=anime">Anime</a>
+    </nav>
+</header>
+<main>
+    <h1><span class="pack-name"></span> - Betal</h1>
+    <div class="error" style="text-align: center"></div>
+    <section class="payment">
+        <form action="./pay.html" method="GET">
+            <div>
+                <label>First name</label>
+                <input type="text" name="firstName"></input>
+            </div>
+            <div>
+                <label>Last name</label>
+                <input type="text" name="lastName"></input>
+            </div>
+            <div class="credit-card-number">
+                <label>Credit card number</label>
+                <input type="text" name="creditCard"></input>
+            </div>
+            <div class="credit-card-bottom">
+                <div class="cvc">
+                    <label>CVC code</label>
+                    <input type="text" name="cvc" placeholder="123"></input>
                 </div>
-            </a>
-            <nav>
-                <a href="./pay.html?pack=action">Action</a>
-                <a href="./pay.html?pack=masterpieces">Mesterverk</a>
-                <a href="./pay.html?pack=anime">Anime</a>
-            </nav>
-        </header>
-        <main>
-            <h1><span class="pack-name"></span> - Betal</h1>
-            <div class="error" style="text-align: center"></div>
-            <section class="payment">
-                <form action="./pay.html" method="GET">
-                    <div>
-                        <label>First name</label>
-                        <input type="text" name="firstName"></input>
-                    </div>
-                    <div>
-                        <label>Last name</label>
-                        <input type="text" name="lastName"></input>
-                    </div>
-                    <div class="credit-card-number">
-                        <label>Credit card number</label>
-                        <input type="text" name="creditCard"></input>
-                    </div>
-                    <div class="credit-card-bottom">
-                        <div class="cvc">
-                            <label>CVC code</label>
-                            <input type="text" name="cvc" placeholder="123"></input>
-                        </div>
-                        <div class="expiry">
-                            <label>Expiry date</label>
-                            <input type="text" name="expiry" placeholder="dd/mm/yy"></input>
-                        </div>
-                    </div>
-                    <input class="hidden" name="paid" value="true"></input>
-                    <button>Submit</button>
-                </form>
-            </section>
-            <div class="pack" id="pack_action">
-                <a href="./pay.html?pack=action">
-                    <div class="head">
-                        <h1>Action klassikere <span class="sale">-40%</span></h1>
-                        <div class="price">
-                            <span class="old">580kr</span>
-                            <span class="new">349kr</span>
-                        </div>
-                    </div>
-                    <div class="movies">
-                        <div>
-                            <img src="images/posters/300.jpg" alt="300">
-                            <div class="title">300</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">1h 57min</span>
-                                    <span class="stars">3/5 ★★★</span>
-                                </div>
-                                King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/blade_runner.jpg" alt="Blade Runner">
-                            <div class="title">Blade Runner</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">1h 57min</span>
-                                    <span class="stars">4/5 ★★★★</span>
-                                </div>
-                                A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/django.jpg" alt="Django">
-                            <div class="title">Django</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 45min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/inception.jpg" alt="Inception">
-                            <div class="title">Inception</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 28min</span>
-                                    <span class="stars">4/5 ★★★★</span>
-                                </div>
-                                A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/scarface.jpg" alt="Scarface">
-                            <div class="title">Scarface</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 50min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <div class="expiry">
+                    <label>Expiry date</label>
+                    <input type="text" name="expiry" placeholder="dd/mm/yy"></input>
+                </div>
             </div>
-            <div class="pack" id="pack_masterpieces">
-                <a href="./pay.html?pack=masterpieces">
-                    <div class="head">
-                        <h1>Mesterverk <span class="sale">-33%</span></h1>
-                        <div class="price">
-                            <span class="old">446kr</span>
-                            <span class="new">299kr</span>
+            <input class="hidden" name="paid" value="true"></input>
+            <button>Submit</button>
+        </form>
+    </section>
+    <div class="pack" id="pack_action">
+        <a href="./pay.html?pack=action">
+            <div class="head">
+                <h1>Action klassikere <span class="sale">-40%</span></h1>
+                <div class="price">
+                    <span class="old">580kr</span>
+                    <span class="new">349kr</span>
+                </div>
+            </div>
+            <div class="movies">
+                <div>
+                    <img src="images/posters/300.jpg" alt="300">
+                    <div class="title">300</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">1h 57min</span>
+                            <span class="stars">3/5 ★★★</span>
                         </div>
+                        King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.
                     </div>
-                    <div class="movies">
-                        <div>
-                            <img src="images/posters/clockwork.jpg" alt="A Clockwork Orange">
-                            <div class="title">A Clockwork Orange</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 16min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.
-                            </div>
+                </div>
+                <div>
+                    <img src="images/posters/blade_runner.jpg" alt="Blade Runner">
+                    <div class="title">Blade Runner</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">1h 57min</span>
+                            <span class="stars">4/5 ★★★★</span>
                         </div>
-                        <div>
-                            <img src="images/posters/baby_driver.jpg" alt="Baby Driver">
-                            <div class="title">Baby Driver</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">1h 53min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/parasite.jpg" alt="Parasite">
-                            <div class="title">Parasite</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 12min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/shining.jpg" alt="The Shining">
-                            <div class="title">The Shining</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 26min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/space_oddysey.jpg" alt="2001: A Space Oddysey">
-                            <div class="title">2001: A Space Oddysey</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 29min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000.
-                            </div>
-                        </div>
+                        A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.
                     </div>
-                </a>
-            </div>
-            <div class="pack" id="pack_anime">
-                <a href="./pay.html?pack=anime">
-                    <div class="head">
-                        <h1>Kinesiske Tegneserier <span class="sale">-69%</span></h1>
-                        <div class="price">
-                            <span class="old">1355kr</span>
-                            <span class="new">420kr</span>
+                </div>
+                <div>
+                    <img src="images/posters/django.jpg" alt="Django">
+                    <div class="title">Django</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 45min</span>
+                            <span class="stars">5/5 ★★★★★</span>
                         </div>
+                        With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.
                     </div>
-                    <div class="movies">
-                        <div>
-                            <img src="images/posters/akira.jpg" alt="Akira">
-                            <div class="title">Akira</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">2h 4min</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by two teenagers and a group of psychics.
-                            </div>
+                </div>
+                <div>
+                    <img src="images/posters/inception.jpg" alt="Inception">
+                    <div class="title">Inception</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 28min</span>
+                            <span class="stars">4/5 ★★★★</span>
                         </div>
-                        <div>
-                            <img src="images/posters/death_note.jpg" alt="Death note">
-                            <div class="title">Death note</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">24min 37eps.</span>
-                                    <span class="stars">5/5 ★★★★★</span>
-                                </div>
-                                An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/kill_la_kill.jpg" alt="Kill la Kill">
-                            <div class="title">Kill la Kill</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">25min 25eps</span>
-                                    <span class="stars">4/5 ★★★★</span>
-                                </div>
-                                A young girl arrives at a school of superhumans to find out the truth behind her father's murder.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/re_zero.jpg" alt="Re:Zero">
-                            <div class="title">Re:Zero</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">24min 66eps</span>
-                                    <span class="stars">3/5 ★★★</span>
-                                </div>
-                                Shortly after being summoned to a new world, Subaru Natsuki and his new female companion are brutally murdered. But then he awakes to find himself in the same alley, with the same thugs, the same girl, and the day begins to repeat.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="images/posters/konosuba.jpg" alt="Konosuba">
-                            <div class="title">Konosuba</div>
-                            <div class="description">
-                                <div class="info">
-                                    <span class="runtime">24min 21eps</span>
-                                    <span class="stars">4/5 ★★★★</span>
-                                </div>
-                                It was a happy day for Kazuma - right up to the moment he died. A goddess intervenes and offers him a second chance in a magical land.
-                            </div>
-                        </div>
+                        A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.
                     </div>
-                </a>
+                </div>
+                <div>
+                    <img src="images/posters/scarface.jpg" alt="Scarface">
+                    <div class="title">Scarface</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 50min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.
+                    </div>
+                </div>
             </div>
-        </main>
-        <footer>
-            <div>
-                © Copyright Film Dealeren 2020
+        </a>
+    </div>
+    <div class="pack" id="pack_masterpieces">
+        <a href="./pay.html?pack=masterpieces">
+            <div class="head">
+                <h1>Mesterverk <span class="sale">-33%</span></h1>
+                <div class="price">
+                    <span class="old">446kr</span>
+                    <span class="new">299kr</span>
+                </div>
             </div>
-            <div class="details">
-                <details>
-                    <summary>Kilder</summary>
-                    Alle bakgrunner er i åpent domene, anskaffet fra <a href="https://www.publicdomainpictures.net/" target="_blank">https://www.publicdomainpictures.net/</a>. <br>
-                    Alle film bilder er fra <a href="https://www.imdb.com/" target="_blank">IMDB</a> og <a href="https://myanimelist.net/" target="_blank">myanimelist.net</a>.
-                </details>
-                <details>
-                    <summary>Kontakt oss</summary>
-                    Telefon: 38 92 64 48 <br>
-                    Email: film@dealeren.com
-                </details>
+            <div class="movies">
+                <div>
+                    <img src="images/posters/clockwork.jpg" alt="A Clockwork Orange">
+                    <div class="title">A Clockwork Orange</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 16min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/baby_driver.jpg" alt="Baby Driver">
+                    <div class="title">Baby Driver</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">1h 53min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/parasite.jpg" alt="Parasite">
+                    <div class="title">Parasite</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 12min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/shining.jpg" alt="The Shining">
+                    <div class="title">The Shining</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 26min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/space_oddysey.jpg" alt="2001: A Space Oddysey">
+                    <div class="title">2001: A Space Oddysey</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 29min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000.
+                    </div>
+                </div>
             </div>
-            <div>
-                Nettside utviklet av <a href="" target="_blank">Meron Kidane</a>.
+        </a>
+    </div>
+    <div class="pack" id="pack_anime">
+        <a href="./pay.html?pack=anime">
+            <div class="head">
+                <h1>Kinesiske Tegneserier <span class="sale">-69%</span></h1>
+                <div class="price">
+                    <span class="old">1355kr</span>
+                    <span class="new">420kr</span>
+                </div>
             </div>
-        </footer>
-        <script>
-            if (/paid=true/.test(window.location.href)) {
-                // Har betalt
-                document.querySelector('main > h1').innerText = 'Takk før kjøpet';
-                document.querySelector('.payment').classList.add('hidden');
-                document.querySelector('main > .error').innerHTML = `
+            <div class="movies">
+                <div>
+                    <img src="images/posters/akira.jpg" alt="Akira">
+                    <div class="title">Akira</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">2h 4min</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by two teenagers and a group of psychics.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/death_note.jpg" alt="Death note">
+                    <div class="title">Death note</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">24min 37eps.</span>
+                            <span class="stars">5/5 ★★★★★</span>
+                        </div>
+                        An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/kill_la_kill.jpg" alt="Kill la Kill">
+                    <div class="title">Kill la Kill</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">25min 25eps</span>
+                            <span class="stars">4/5 ★★★★</span>
+                        </div>
+                        A young girl arrives at a school of superhumans to find out the truth behind her father's murder.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/re_zero.jpg" alt="Re:Zero">
+                    <div class="title">Re:Zero</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">24min 66eps</span>
+                            <span class="stars">3/5 ★★★</span>
+                        </div>
+                        Shortly after being summoned to a new world, Subaru Natsuki and his new female companion are brutally murdered. But then he awakes to find himself in the same alley, with the same thugs, the same girl, and the day begins to repeat.
+                    </div>
+                </div>
+                <div>
+                    <img src="images/posters/konosuba.jpg" alt="Konosuba">
+                    <div class="title">Konosuba</div>
+                    <div class="description">
+                        <div class="info">
+                            <span class="runtime">24min 21eps</span>
+                            <span class="stars">4/5 ★★★★</span>
+                        </div>
+                        It was a happy day for Kazuma - right up to the moment he died. A goddess intervenes and offers him a second chance in a magical land.
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</main>
+<footer>
+    <div>
+        © Copyright Film Dealeren 2021
+    </div>
+    <div class="details">
+        <details>
+            <summary>Kilder</summary>
+            Alle bakgrunner er i åpent domene, anskaffet fra <a href="https://www.publicdomainpictures.net/" target="_blank">https://www.publicdomainpictures.net/</a>. <br>
+            Alle film bilder er fra <a href="https://www.imdb.com/" target="_blank">IMDB</a> og <a href="https://myanimelist.net/" target="_blank">myanimelist.net</a>.
+        </details>
+        <details>
+            <summary>Kontakt oss</summary>
+            Telefon: 44444444 <br>
+            Email: film@dealeren.com
+        </details>
+    </div>
+    <div>
+        Nettside utviklet av <a href="" target="_blank">Meron Kidane</a>.
+    </div>
+</footer>
+<script>
+    if (/paid=true/.test(window.location.href)) {
+        // Har betalt
+        document.querySelector('main > h1').innerText = 'Takk før kjøpet';
+        document.querySelector('.payment').classList.add('hidden');
+        document.querySelector('main > .error').innerHTML = `
                     <img src="images/stonks.jpg" alt="Stonks">
                     <a href="./">Gå tilbake til forsiden</a>
                 `;
-            } else {
-                try {
-                    // Velg pakke
-                    const pack = window.location.href.match(/pack=(\w+)/)[1];
-                    const packElm = document.querySelector(`#pack_${pack}`);
-                    const packName = packElm.querySelector('.head h1').innerText.slice(0, -packElm.querySelector('.head h1 .sale').innerText.length);
-                    packElm.classList.add('selected');
-                    document.querySelectorAll('.pack-name').forEach(p => p.innerText = packName);
-                } catch (err) {
-                    console.error(err);
-                    // Ingen pakke valgt (mest sansynlig :) )
-                    document.querySelector('main > h1').innerText = 'Ingen pakke valgt';
-                    document.querySelector('main > h1').innerText = 'Ingen pakke valgt';
-                    document.querySelector('.payment').classList.add('hidden');
-                    document.querySelector('main > .error').innerHTML = `<a href="./">Gå tilbake til forsiden</a>`;
-                }
-            }
-        </script>
-    </body>
+    } else {
+        try {
+            // Velg pakke
+            const pack = window.location.href.match(/pack=(\w+)/)[1];
+            const packElm = document.querySelector(`#pack_${pack}`);
+            const packName = packElm.querySelector('.head h1').innerText.slice(0, -packElm.querySelector('.head h1 .sale').innerText.length);
+            packElm.classList.add('selected');
+            document.querySelectorAll('.pack-name').forEach(p => p.innerText = packName);
+        } catch (err) {
+            console.error(err);
+            // Ingen pakke valgt (mest sansynlig :) )
+            document.querySelector('main > h1').innerText = 'Ingen pakke valgt';
+            document.querySelector('main > h1').innerText = 'Ingen pakke valgt';
+            document.querySelector('.payment').classList.add('hidden');
+            document.querySelector('main > .error').innerHTML = `<a href="./">Gå tilbake til forsiden</a>`;
+        }
+    }
+</script>
+</body>
 </html>
